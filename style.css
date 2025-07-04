@@ -1,0 +1,48 @@
+body {
+  background-color: rgb(47, 212, 212);
+  width: 50%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#zwischenergebnis {
+  font-size: 2rem;
+  text-align: right;
+  color: blue;
+}
+
+#eingabe {
+  font-size: 2rem;
+  text-align: right;
+}
+
+.grid-container {
+  gap: 0.2rem;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+.grid-item {
+  margin: 0.2rem 0.2rem;
+  background-color: grey;
+  color: yellow;
+  font-size: 2rem;
+  height: 5rem;
+  border-radius: 5px;
+  border: solid 2px #161616;
+}
+
+#liste {
+  width: 15rem;
+  font-size: 2rem;
+  border-left: solid 1px yellow;
+  height: 100vh;
+  text-align: right;
+}
+.wrapper {
+  display: flex;
+}
+
+.calculator {
+  flex: 1;
+  padding-right: 1rem;
+}
