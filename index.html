@@ -10,7 +10,7 @@
   <body>
     <div class="wrapper">
       <div class="calculator">
-        <div id="eingabe">Eingabe</div>
+        <div id="eingabe">0</div>
         <div id="zwischenergebnis">0</div>
         <div class="grid-container">
           <button class="grid-item" onclick="number(7)">7</button
@@ -24,11 +24,11 @@
           <button class="grid-item" onclick="number(1)">1</button
           ><button class="grid-item" onclick="number(2)">2</button
           ><button class="grid-item" onclick="number(3)">3</button
-          ><button class="grid-item">-</button>
+          ><button class="grid-item" onclick="subtract()">-</button>
           <button class="grid-item">CE</button
           ><button class="grid-item" onclick="number(0)">0</button
           ><button class="grid-item">=</button
-          ><button class="grid-item">+</button>
+          ><button class="grid-item" onclick="add()">+</button>
         </div>
       </div>
       <div id="liste"></div>
