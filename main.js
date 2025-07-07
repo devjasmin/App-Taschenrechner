@@ -1,7 +1,6 @@
 let aktuelleEingabe = 0;
 let vorherigeEingabe = 0;
 let operator = "+";
-let operator1 = "-";
 
 // Zahl ins Eingabefeld eingeben
 function number(zahl) {
@@ -20,17 +19,27 @@ function add() {
 
 // Zahlen sollen subrahiert werden
 function subtract() {
-  performOperator1();
+  performOperator();
   aktuelleEingabe = 0;
-  updateVorherigerInput1();
+  updateVorherigerInput();
   updateAktuellerInput();
 }
 
 // Zahlen sollen multipliziert werden
-function multiply() {}
+function multiply() {
+  performOperator();
+  aktuelleEingabe = 0;
+  updateVorherigerInput();
+  updateAktuellerInput();
+}
 
 // Zahlen sollen dividiert werden
-function divide() {}
+function divide() {
+  performOperator();
+  aktuelleEingabe = 0;
+  updateVorherigerInput();
+  updateAktuellerInput();
+}
 
 // Summe soll ausgegeben werden
 function enter() {}
@@ -40,18 +49,13 @@ function performOperator() {
   let currentResult = 0;
   if (operator === "+") {
     currentResult = vorherigeEingabe + aktuelleEingabe;
-  }
-  vorherigeEingabe = currentResult;
-}
-function performOperator1() {
-  let currentResult = 0;
-  if (operator === "+") {
-    currentResult = vorherigeEingabe + aktuelleEingabe;
-  } else {
-    operator1 === "-";
+  } else if (operator === "-") {
     currentResult = vorherigeEingabe - aktuelleEingabe;
+  } else if (operator === "*") {
+    currentResult = vorherigeEingabe * aktuelleEingabe;
+  } else if (operator === "/") {
+    currentResult = vorherigeEingabe / aktuelleEingabe;
   }
-
   vorherigeEingabe = currentResult;
 }
 
@@ -64,8 +68,4 @@ function updateAktuellerInput() {
 
 function updateVorherigerInput() {
   document.getElementById("eingabe").innerHTML = vorherigeEingabe + "+";
-}
-
-function updateVorherigerInput1() {
-  document.getElementById("eingabe").innerHTML = vorherigeEingabe + "-";
 }
