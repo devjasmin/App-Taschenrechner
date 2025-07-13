@@ -12,6 +12,7 @@ function number(zahl) {
 // Zahlen sollen addiert werden
 function add() {
   performOperator();
+  operator = "+";
   aktuelleEingabe = 0;
   updateVorherigerInput();
   updateAktuellerInput();
@@ -20,6 +21,7 @@ function add() {
 // Zahlen sollen subrahiert werden
 function subtract() {
   performOperator();
+  operator = "-";
   aktuelleEingabe = 0;
   updateVorherigerInput();
   updateAktuellerInput();
@@ -28,6 +30,7 @@ function subtract() {
 // Zahlen sollen multipliziert werden
 function multiply() {
   performOperator();
+  operator = "*";
   aktuelleEingabe = 0;
   updateVorherigerInput();
   updateAktuellerInput();
@@ -36,6 +39,7 @@ function multiply() {
 // Zahlen sollen dividiert werden
 function divide() {
   performOperator();
+  operator = "/";
   aktuelleEingabe = 0;
   updateVorherigerInput();
   updateAktuellerInput();
@@ -67,5 +71,5 @@ function updateAktuellerInput() {
 }
 
 function updateVorherigerInput() {
-  document.getElementById("eingabe").innerHTML = vorherigeEingabe + "+";
+  document.getElementById("eingabe").innerHTML = vorherigeEingabe + operator;
 }
