@@ -5,7 +5,6 @@ let operator = "+";
 // Zahl ins Eingabefeld eingeben
 function number(zahl) {
   aktuelleEingabe = aktuelleEingabe * 10 + zahl;
-  console.log(aktuelleEingabe);
   updateAktuellerInput();
 }
 
@@ -42,11 +41,18 @@ function divide() {
   operator = "/";
   aktuelleEingabe = 0;
   updateVorherigerInput();
-  updateAktuellerInput();
+  aktuelleEingabe = vorherigeEingabe;
+  updateAktuellerInput;
 }
 
 // Summe soll ausgegeben werden
-function enter() {}
+function enter() {
+  performOperator();
+  operator = "=";
+  aktuelleEingabe = 0;
+  updateVorherigerInput();
+  updateAktuellerInput();
+}
 
 // Schleife für Operator soll ausgeführt werden
 function performOperator() {
@@ -72,4 +78,8 @@ function updateAktuellerInput() {
 
 function updateVorherigerInput() {
   document.getElementById("eingabe").innerHTML = vorherigeEingabe + operator;
+}
+
+function updateListe() {
+  document.getElementById("Liste").innerHTML = Liste;
 }
